@@ -1,5 +1,6 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 from fixture.session import SessionHelper
+from fixture.group import GroupHelper
 
 class Application:
 
@@ -7,7 +8,7 @@ class Application:
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
         self.session=SessionHelper(self)
-
+        self.group=GroupHelper(self)
 
     def return_to_groups_page(self):
         # return to groups page
