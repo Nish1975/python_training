@@ -12,6 +12,7 @@ class DbFixture:
         self.connection.autocommit=True
 
     def get_group_list(self):
+        #self.connection.commit()
         list=[]
         cursor=self.connection.cursor()
         try:
@@ -24,6 +25,7 @@ class DbFixture:
         return list
 
     def get_contact_list(self):
+        #self.connection.commit()
         list=[]
         cursor=self.connection.cursor()
         try:
